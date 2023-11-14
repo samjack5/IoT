@@ -52,7 +52,7 @@ if(numero === 1){
 let Arreglo= [1,2,3,4,5,6,7,8,9,10];
 Arreglo.forEach((numero)=> console.log(numero*numero)
 
-Arreglo.forEach((numero)=> {
+ Arreglo.forEach((numero)=> {
     let cuadrado= numero*numero
     console.log(cuadrado)}
 })
