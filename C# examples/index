@@ -1,0 +1,27 @@
+public async Task<IActionResult>OnPostDelete(int ID){
+try{
+if (_context.Alumnos== null || ID==0){
+    TempData["Errores"]="error en BD";
+    return page();
+}
+var alumno= await _context.Alumnos.FindAsync(ID);
+ if(alumno==null){
+     TempData["Errores"]="Alumno desconocido";
+    return page();
+ }
+var si= await _authorizationService.AuthorizeAsync(User,alumno,Operaciones.Delete);
+if (!si.Sucessed)
+{
+    return Forbid();
+}
+//_context.Alumnos.Remove(alumno);
+alumno.Borrado=true;
+await _context.SaveChangesAsync();
+TempData["Mensajes"]="el alumno"+alumno.Nombre+"ha sido borrado";
+return RedirectToPage("Index");
+}
+catch(Exception ex){
+    TempData["Errores"]="error en BD"+ex.Message;
+    return page();
+}
+}
