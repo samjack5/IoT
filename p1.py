@@ -1,8 +1,14 @@
-from gpiozero import LED, Button
+
+import gpiozero as GPIO
 import time
 import random
-import threading
 
-led_1=LED(14)
-led2=LED(15)
-led3=LED(18)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.OUT) 
+GPIO.setup(18, GPIO.OUT)  
+GPIO.setup(19, GPIO.OUT)  
+
+def encender_led_verde():
+    GPIO.output(18, GPIO.HIGH) 
+    time.sleep(1) 
+    GPIO.output(3, GPIO.LOW)   

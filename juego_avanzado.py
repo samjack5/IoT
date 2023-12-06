@@ -3,6 +3,7 @@ import time
 import random
 import threading
 
+print("este se llama juego avanzado")
 
 class Jugador(object):
     def __init__(self, button_io:int, led_io:int, jugador:int, tiempo_restante=30):

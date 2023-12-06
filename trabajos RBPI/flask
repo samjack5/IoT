@@ -1,0 +1,13 @@
+from flask import Flask, jsonify
+app= Flask(__name__)
+
+@app.route('/temperatura', methods=['GET'])
+def traer_temperatura(sesnor=Adafruit_DHT.DHT11, pin=4):
+    try:
+        h,t=Adafruit_DHT.read_retry(sensor, pin)
+    except: Exception as e:
+print(str(e))
+
+jsonify({'msg':str(e)}),500
+else:
+jsonify({'temperatura': t}, 'fecha_lectura')
