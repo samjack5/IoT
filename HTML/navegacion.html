@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .navegacion a {
+            display: block;
+            background-color: bisque;
+            width: 200px;
+        }
+        .navegacion a.activo {
+            background-color: aqua;
+            color: black;   
+        }
+        
+        .navegation a:not(a.activo){
+            background-color:  white;
+            color: black;   
+          }  
+
+        .navegacion a:hover {
+            background-color: red;
+            color: blue;   
+        } 
+    </style>
+    <div class="navegacion">
+        <a href="#" class="activo">Home</a>
+        <a href="dinosaurios">Dinosaurios</a>
+        <a href="Gatos">Gatos</a>
+        <a href="Leones">Leones</a>
+
+
+    </div>
+</body>
+</html>
