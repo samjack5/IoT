@@ -1,61 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control de LEDs</title>
-    <style>
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        <h1 BIENVENIDOS A NUESTRA PAGINA WEb <h1>
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Control de LEDs</h1>
-    <img src="https://media.vlpt.us/images/mythos/post/5584cec3-97f8-45b4-a8c8-003c574f732c/Raspberry_Pi_OS_Logo.png" alt="Raspberry Pi OS Logo">
-    <br><br>
-    <button onclick="encenderLED('verde')">Encender LED Verde</button>
-    <button onclick="encenderLED('amarillo')">Encender LED Amarillo</button>
-    <button onclick="encenderLED('rojo')">Encender LED Rojo</button>
-
-    <script>
-        function encenderLED(color) {
-            alert(`Encendiendo LED ${color}`);
-            <& import psutil
-            import RPi.GPio as GPio
-            import time 
-
-     GPIO.setMode(GPIO.BCM)
-     GPIO.setup(17),GPIO.OUT)
-     GPIO.setup(18),GPIO.OUT)
-     GPIO.setup(19),GPIO.OUT)
-
-     def encender_led=(color)
-       if color=='verde':
-       GPIO.output(17, GPIO.HIGH)
-        GPIO.output(18, GPIO.LOW)
-        GPIO.output(19, GPIO.LOW)
-    elif color == 'amarillo':
-        GPIO.output(17, GPIO.LOW)
-        GPIO.output(18, GPIO.HIGH)
-        GPIO.output(19, GPIO.LOW)
-    elif color == 'rojo':
-        GPIO.output(17, GPIO.LOW)
-        GPIO.output(18, GPIO.LOW)
-        GPIO.output(19, GPIO.HIGH)
-    elif color == 'apagar':
-       GPIO.output(Buzzer, GPIO.LOW)
-
-
-
-                                                                                                                                                                    
-
-
-
-    
-        }
-    </script>
+    <div class="contenedor">
+        <header class="encabezado">encabezado</header>
+        <nav class="navegacion">navegacion</nav>
+        <main class="main">contenido principal</main>
+        <aside class="aside">barra laterial</aside>
+        <footer class="footer">pie de pagina</footer>
+    </div>
 </body>
+
 </html>
